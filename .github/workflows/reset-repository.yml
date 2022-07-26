@@ -1,0 +1,24 @@
+name: Reset Repository
+
+on:
+  schedule: 
+  - cron: '0 0 * * *'
+
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Reset Repository Files
+        run: rm -rf docs && mkdir docs
+
+      - name: Copy over index file
+        run: cp index.html docs/index.html
+
+      - name: Commit Changes
+        run: git add . && git commit -m "Reset Repository"
+        
