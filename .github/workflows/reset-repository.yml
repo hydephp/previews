@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   
 jobs:
-  build:
+  reset-repository:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,4 +21,3 @@ jobs:
 
       - name: Commit Changes
         run: git add . && git commit -m "Reset Repository"
-        
