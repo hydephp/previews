@@ -3,15 +3,15 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HydePHP.com PR Preview - Creating Static Pages</title>
+<title>HydePHP.com PR Preview - InMemoryPages</title>
 
  
 <link rel="shortcut icon" href="../../media/favicon.ico" type="image/x-icon">
 
 
-<link rel="canonical" href="https://hydephp.com/docs/1.x/static-pages.html">
-<meta name="twitter:title" content="HydePHP.com PR Preview - Creating Static Pages">
-<meta property="og:title" content="HydePHP.com PR Preview - Creating Static Pages">
+<link rel="canonical" href="https://hydephp.com/docs/1.x/in-memory-pages.html">
+<meta name="twitter:title" content="HydePHP.com PR Preview - InMemoryPages">
+<meta property="og:title" content="HydePHP.com PR Preview - InMemoryPages">
 
 
 <link rel="sitemap" href="https://hydephp.com/sitemap.xml" type="application/xml" title="Sitemap">
@@ -119,7 +119,7 @@
         </a>
     </li>                                    </ul>
             </li>
-                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: true }" >
+                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
                     <h4 class="sidebar-group-heading text-base font-semibold  cursor-pointer dark:group-hover:text-white ">Creating Content</h4>
                                             <button class="sidebar-group-toggle opacity-50 group-hover:opacity-100">
@@ -135,57 +135,11 @@
             <a href="../../docs/1.x/blog-posts" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Creating Blog Posts
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4 active -ml-8 pl-8 bg-black/5 dark:bg-black/10" role="listitem">
-            <a href="../../docs/1.x/static-pages" aria-current="true" class="-ml-8 pl-4 py-1 px-2 block text-indigo-600 dark:text-indigo-400 dark:font-medium border-l-[0.325rem] border-indigo-500 transition-colors duration-300 ease-in-out hover:bg-black/10">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+            <a href="../../docs/1.x/static-pages" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Markdown &amp; Blade Pages
         </a>
-
-                    <span class="sr-only">Table of contents</span>
-            <ul class="table-of-contents">
-<li>
-<a href="#introduction-to-hyde-pages">Introduction to Hyde Pages</a>
-<ul>
-<li>
-<a href="#best-practices-and-hyde-expectations">Best Practices and Hyde Expectations</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#creating-markdown-pages">Creating Markdown Pages</a>
-<ul>
-<li>
-<a href="#scaffolding-markdown-pages">Scaffolding Markdown Pages</a>
-</li>
-<li>
-<a href="#front-matter-is-optional">Front Matter is optional</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#creating-blade-pages">Creating Blade Pages</a>
-<ul>
-<li>
-<a href="#scaffolding-blade-pages">Scaffolding Blade Pages</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#when-to-use-which">When to use which?</a>
-<ul>
-<li>
-<a href="#comparison">Comparison</a>
-</li>
-<li>
-<a href="#live-demos">Live Demos</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#bonus-creating-html-pages">Bonus: Creating HTML Pages</a>
-</li>
-</ul>
-
-            </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
             <a href="../../docs/1.x/documentation-pages" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Documentation Pages
         </a>
@@ -241,7 +195,7 @@
         </a>
     </li>                                    </ul>
             </li>
-                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
+                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: true }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
                     <h4 class="sidebar-group-heading text-base font-semibold  cursor-pointer dark:group-hover:text-white ">Advanced Features</h4>
                                             <button class="sidebar-group-toggle opacity-50 group-hover:opacity-100">
@@ -265,11 +219,33 @@
             <a href="../../docs/1.x/hyde-pages" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             HydePage API
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
-            <a href="../../docs/1.x/in-memory-pages" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4 active -ml-8 pl-8 bg-black/5 dark:bg-black/10" role="listitem">
+            <a href="../../docs/1.x/in-memory-pages" aria-current="true" class="-ml-8 pl-4 py-1 px-2 block text-indigo-600 dark:text-indigo-400 dark:font-medium border-l-[0.325rem] border-indigo-500 transition-colors duration-300 ease-in-out hover:bg-black/10">
             InMemoryPages
         </a>
-    </li>                                    </ul>
+
+                    <span class="sr-only">Table of contents</span>
+            <ul class="table-of-contents">
+<li>
+<a href="#introduction">Introduction</a>
+<ul>
+<li>
+<a href="#when-to-use">When to use</a>
+</li>
+<li>
+<a href="#about-discovery">About discovery</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#creating-the-page">Creating the page</a>
+</li>
+<li>
+<a href="#api-reference">API Reference</a>
+</li>
+</ul>
+
+            </li>                                    </ul>
             </li>
                     <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
@@ -320,123 +296,35 @@
         <article id="document" itemscope itemtype="https://schema.org/Article" class="mx-auto lg:ml-8 prose dark:prose-invert max-w-3xl p-12 md:px-16 max-w-[1000px] min-h-[calc(100vh_-_4rem)] torchlight-enabled">
     
     <header id="document-header" class="flex items-center flex-wrap prose-h1:mb-3">
-        <h1>Creating Static Pages</h1>
+        <h1>InMemoryPages</h1>
     </header>
     <section id="document-main-content" itemprop="articleBody">
-        <h2>Introduction to Hyde Pages<a id="introduction-to-hyde-pages" href="#introduction-to-hyde-pages" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
-<p>Hyde offers two ways to create static pages:
-<strong>Markdown pages</strong> which are perfect for simple pages that focuses heavily on the content,
-and <strong>Blade pages</strong> which are perfect for more complex pages where you want full control over the HTML,
-and where you may want to include other components.</p>
-<p>Let's start with the basics.</p>
-<h3>Best Practices and Hyde Expectations<a id="best-practices-and-hyde-expectations" href="#best-practices-and-hyde-expectations" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h3>
-<p>Since Hyde does a lot of things automatically, there are some things you may need
-to keep in mind when creating blog posts so that you don't get unexpected results.</p>
-<h4>Filenames<a id="filenames" href="#filenames" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h4>
-<ul>
-<li>Hyde Pages are files are stored in the <code>_pages</code> directory</li>
-<li>The filename is used as the filename for the compiled HTML</li>
-<li>Filenames should use <code>kebab-case-identifier</code> format, followed by the appropriate extension</li>
-<li>Files prefixed with <code>_underscores</code> are ignored by Hyde</li>
-<li>Your page will be stored in <code>_site/&lt;identifier&gt;.html</code>
-</li>
-<li>Blade pages will override any Markdown pages with the same filename when compiled</li>
-</ul>
-<h2>Creating Markdown Pages<a id="creating-markdown-pages" href="#creating-markdown-pages" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
-<p>Markdown pages are the easiest way to create static pages. You can create a Markdown page by adding a file to the
-<code>_pages</code> directory where the filename ends in <code>.md</code>. You can also use <a href="front-matter">Front Matter</a> to add page metadata.</p>
-<h3>Scaffolding Markdown Pages<a id="scaffolding-markdown-pages" href="#scaffolding-markdown-pages" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h3>
-<p>Scaffolding a Markdown page is as easy as using the <a href="console-commands">HydeCLI</a>.</p>
-<pre><code data-theme="material-theme-palenight" data-lang="bash" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">1</span><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">hyde</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:page</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">Page Title</span><span style="color: #89DDFF;">&quot;</span></div></code></pre>
-<p>This will create the following file saved as <code>_pages/page-title.md</code></p>
-<pre><code data-theme="material-theme-palenight" data-lang="markdown" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">1</span><span style="color: #A6ACCD;">---</span></div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">2</span><span style="color: #F07178;">title</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">Page Title</span></div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">3</span><span style="color: #A6ACCD;">---</span></div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">4</span>&nbsp;</div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">5</span><span style="color: #89DDFF;"># </span><span style="color: #FFCB6B;">Page Title</span></div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">6</span>&nbsp;</div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">7</span><span style="color: #A6ACCD;">// Write your content here</span></div></code></pre>
-<p>You can of course also create the file yourself with your text editor.</p>
-<h3>Front Matter is optional<a id="front-matter-is-optional" href="#front-matter-is-optional" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h3>
-<p>The most common front matter used for Markdown pages is the title, which is used as the HTML <code>&lt;title&gt;</code>.</p>
-<p>If you don't supply a front matter title, Hyde will attempt to find a title in the Markdown body by searching
-for the first level one heading (<code># Page Title</code>), and if that fails, it will generate one from the filename.</p>
-<h4>Navigation Front Matter<a id="navigation-front-matter" href="#navigation-front-matter" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h4>
-<p>Furthermore, you can customize how the page appears in the navigation menu using the following front matter options.
-You can set just one or all of them, as Hyde will fill in the gaps for the rest.</p>
-<pre><code data-theme="material-theme-palenight" data-lang="yaml" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">1</span><span style="color: #F07178;">navigation</span><span style="color: #89DDFF;">:</span></div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">2</span><span style="color: #A6ACCD;">    </span><span style="color: #F07178;">label</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">string</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;">,</span></div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">3</span><span style="color: #A6ACCD;">    </span><span style="color: #F07178;">priority</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">int</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;">,</span></div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">4</span><span style="color: #A6ACCD;">    </span><span style="color: #F07178;">hidden</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">bool</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;">,</span></div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">5</span><span style="color: #A6ACCD;">    </span><span style="color: #F07178;">group</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">string</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;">,</span></div></code></pre>
-<ul>
-<li>
-<code>label</code> is the text that will be displayed in the navigation menu</li>
-<li>
-<code>priority</code> is the order in which the page will appear in the navigation menu (<code>order</code> is also supported)</li>
-<li>
-<code>hidden</code> will hide the page from the navigation menu (<code>visible</code>) is also supported, but obviously invert the value)</li>
-<li>
-<code>group</code> will put the page in a dropdown menu with the specified group name (<code>category</code>) is also supported)</li>
-</ul>
-<h2>Creating Blade Pages<a id="creating-blade-pages" href="#creating-blade-pages" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
-<p>Since Hyde is based on Laravel and uses the powerful Blade templating engine, you can use Blade pages to create more
-complex pages with both standard HTML, PHP code, and the templating opportunities provided by Blade directives.</p>
-<p>If you are not familiar with Blade, you may want to read <a href="https://laravel.com/docs/10.x/blade">the Laravel Blade docs</a> first.</p>
-<h3>Scaffolding Blade Pages<a id="scaffolding-blade-pages" href="#scaffolding-blade-pages" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h3>
-<p>We can scaffold Blade pages using the same CLI command as Markdown pages, however, this time we need to specify that
-we want to use the <code>blade</code> page type, by using the <code>--type</code> option.</p>
-<pre><code data-theme="material-theme-palenight" data-lang="bash" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">1</span><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">hyde</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:page</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">Page Title</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--type=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">blade</span><span style="color: #89DDFF;">&quot;</span></div></code></pre>
-<p>This will create a file saved as <code>_pages/page-title.blade.php</code></p>
-<p>You can of course also create the file yourself with your text editor, however,
-the scaffolding command for Blade pages is arguably even more helpful than the
-one for Markdown pages, as this one automatically adds the included app Layout.</p>
-<p>Let's take a look at the scaffolded file. You can also copy and paste this
-if you don't want to use the scaffolding command.</p>
-<pre><code data-theme="material-theme-palenight" data-lang="blade" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">1</span><span style="color: #89DDFF;">@extends</span><span style="color: #A6ACCD;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">hyde::layouts.app</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;">)</span></div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">2</span><span style="color: #89DDFF;">@section</span><span style="color: #A6ACCD;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">content</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;">)</span></div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">3</span><span style="color: #89DDFF;">@php</span><span style="color: #A6ACCD;">(</span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">title </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">Page Title</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;">)</span></div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">4</span>&nbsp;</div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">5</span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">main</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">class</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">mx-auto max-w-7xl py-16 px-8</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">6</span><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #F07178;">h1</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">class</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">text-center text-3xl font-bold</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">&gt;</span><span style="color: #A6ACCD;">Page Title</span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">h1</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">7</span><span style="color: #89DDFF;">&lt;/</span><span style="color: #F07178;">main</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">8</span>&nbsp;</div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">9</span><span style="color: #89DDFF;">@endsection</span></div></code></pre>
-<blockquote>
-<p>Tip: You don't have to use Blade in Blade pages. It's also perfectly fine to use plain HTML,
-however you still need to use the <code>blade.php</code> extension so Hyde can recognize it.</p>
-</blockquote>
-<h2>When to use which?<a id="when-to-use-which" href="#when-to-use-which" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
-<p>Markdown pages look great and work well for simple &quot;about&quot; pages and the like, but with Markdown we are still pretty limited.</p>
-<p>If you are comfortable with it, and have the need for it, use Blade to create more complex pages! And mix and match between them! Some page types are better suited for Markdown, and others for Blade.</p>
-<h3>Comparison<a id="comparison" href="#comparison" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Markdown</th>
-<th>Blade</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>➕ Easily created and updated</td>
-<td>➕ Full control over the HTML</td>
-</tr>
-<tr>
-<td>➕ Very fast to create simple and lightweight pages</td>
-<td>➕ Use the default app layout or create your own</td>
-</tr>
-<tr>
-<td>➕ Suited for content heavy pages such as &quot;about us&quot;</td>
-<td>➕ Use Blade templates and components to keep code DRY</td>
-</tr>
-<tr>
-<td>➖ Not as flexible as Blade pages</td>
-<td>➕ Use arbitrary PHP right in the page to create dynamic content</td>
-</tr>
-<tr>
-<td></td>
-<td>➕ Access to all Blade helper directives like @foreach, @if, etc.</td>
-</tr>
-<tr>
-<td></td>
-<td>➖ Takes longer to create as as you need to write the markup</td>
-</tr>
-<tr>
-<td></td>
-<td>➖ You may need to <a href="managing-assets">recompile your CSS</a> if you add Tailwind classes</td>
-</tr>
-</tbody>
-</table>
-<h3>Live Demos<a id="live-demos" href="#live-demos" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h3>
-<p>The Hyde website (<a href="https://hydephp.com/">hydephp.com</a>) uses both Markdown and Blade pages. The homepage for example, is a Blade page and uses a bunch of custom HTML.</p>
-<p>A great example of a Markdown page can be found at <a href="https://hydephp.github.io/portfolio-demo">hydephp.github.io/portfolio-demo</a>, you can see the <a href="https://github.com/hydephp/portfolio-demo/blob/master/_pages/index.md">page source here on GitHub</a>.</p>
-<h2>Bonus: Creating HTML Pages<a id="bonus-creating-html-pages" href="#bonus-creating-html-pages" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
-<p>If you have an already created <code>HTML</code> page, simply drop it into the <code>_pages</code> directory and Hyde will copy it over as it is
-into the <code>_site</code> directory. Like all other Hyde pages, the page will show up in the navigation menu using a title parsed from the filename.
-You won't be able to change any settings with front matter, however.</p>
+        <h2>Introduction<a id="introduction" href="#introduction" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
+<p>This class is a special page class that is not backed by a file on disk, but rather generated at runtime. While it will
+probably not be useful for the majority of users, it's a great class to know about if you are a package developer,
+but feel free to skip this section if you're not interested in this.</p>
+<h3>When to use<a id="when-to-use" href="#when-to-use" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h3>
+<p>This class is especially useful for one-off custom pages. But if your usage grows, or if you want to utilize Hyde
+autodiscovery, you may benefit from creating a custom page class instead, as that will give you full control.</p>
+<h3>About discovery<a id="about-discovery" href="#about-discovery" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h3>
+<p>Since the InMemoryPages are not present in the filesystem, they cannot be found by the auto-discovery process,
+thus it's up to the developer to manually register them. If you are developing for your own project, you can do this in
+the <code>boot</code> method of a service provider, such as the <code>AppServiceProvider</code> which is already present in your <code>app/</code> directory.</p>
+<p>If you are developing a package, you may instead want to register the page in your package extension class, within the
+page collection callback. In either case, if you want your page to be able to be fully processed by Hyde, you need to
+make sure you register it before the full application is booted so that routes can be generated.</p>
+<p><em>To see how to register the page, see the examples below, first we must look at how to actually create the page.</em></p>
+<h2>Creating the page<a id="creating-the-page" href="#creating-the-page" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
+<p>To create an InMemoryPage, you need to instantiate it, and pass it the required parameters.</p>
+<p>A page would not be useful without any content to render. The class offers two content options through the constructor.</p>
+<p>You can either pass a string to the <code>$contents</code> parameter, Hyde will then save that literally as the page's contents.</p>
+<pre><code data-theme="material-theme-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">1</span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">page </span><span style="color: #89DDFF;">=</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">new</span><span style="color: #A6ACCD;"> </span><span style="color: #FFCB6B;">InMemoryPage</span><span style="color: #89DDFF;">(</span><span style="color: #A6ACCD;">contents</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Hello World!</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div></code></pre>
+<p>Alternatively, you can pass a Blade view name to the <code>$view</code> parameter, and Hyde will use that view to render the page
+contents with the supplied front matter during the static site build process.</p>
+<blockquote class="warning"><p>Note that <code>$contents</code> take precedence over <code>$view</code>, so if you pass both, only <code>$contents</code> will be used.</p></blockquote>
+<p>You can also register a macro with the name <code>compile</code> to overload the default compile method.</p>
+<h2>API Reference<a id="api-reference" href="#api-reference" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
+<p>To see all the methods available, please see the <a href="hyde-pages#inmemorypage">InMemoryPage API reference</a>.</p>
     </section>
     <footer id="document-footer" class="flex items-center flex-wrap mt-8 prose-p:my-3 justify-between text-[90%]">
         <p>
@@ -445,7 +333,7 @@ You won't be able to change any settings with front matter, however.</p>
     </i>
 </p>
 <p class="edit-page-link">
-    <a href="https://github.com/hydephp/develop/blob/master/docs/creating-content/static-pages.md">
+    <a href="https://github.com/hydephp/develop/blob/master/docs/advanced-features/in-memory-pages.md">
         Edit Page
     </a>
 </p>
