@@ -110,12 +110,8 @@
             Console Commands
         </a>
     </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
-            <a href="../../docs/1.x/core-concepts" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
-            Core Concepts
-        </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
-            <a href="../../docs/1.x/front-matter" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
-            Front Matter
+            <a href="../../docs/1.x/basic-architecture-concepts" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
+            Key HydePHP Concepts
         </a>
     </li>                                    </ul>
             </li>
@@ -223,7 +219,7 @@
 
             </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
             <a href="../../docs/1.x/updating-hyde" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
-            Updating Hyde Projects
+            Updating Hyde
         </a>
     </li>                                    </ul>
             </li>
@@ -246,14 +242,6 @@
     </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
             <a href="../../docs/1.x/build-tasks" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Custom Build Tasks
-        </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
-            <a href="../../docs/1.x/hyde-pages" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
-            HydePage API
-        </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
-            <a href="../../docs/1.x/in-memory-pages" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
-            InMemoryPages
         </a>
     </li>                                    </ul>
             </li>
@@ -289,10 +277,6 @@
             <a href="../../docs/1.x/page-models" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Page models
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
-            <a href="../../docs/1.x/the-hydekernel" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
-            The HydeKernel
-        </a>
     </li>                                    </ul>
             </li>
             </ul>
@@ -312,7 +296,9 @@
         <p>Since Hyde has a lot of &quot;magic&quot; features which depend on some base assumptions,
 there might be some &quot;gotchas&quot; you might run into. Here are some I can think of,
 did you find a new one? Send a PR to <a href="https://github.com/hydephp/docs">update the docs</a>!</p>
-<blockquote class="info"><p>Tip: You can run <code>php hyde validate</code> to run a series of tests to help you catch common issues.</p></blockquote>
+<blockquote class="info">
+<p>Tip: You can run <code>php hyde validate</code> to run a series of tests to help you catch common issues.</p>
+</blockquote>
 <h2>General Tips<a id="general-tips" href="#general-tips" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
 <p>(In no particular order of importance)</p>
 <ol>
@@ -321,6 +307,7 @@ honestly don't worry about it. Hyde will attempt to fix mistakes and make your l
 <li>You don't need to set an H1 heading in blog posts. The H1 is set by Hyde based on the front matter title.</li>
 <li>You never need front matter, though it is often useful.
 For example, Hyde makes attempts to guess the title for a page depending on the content. (Headings, filenames, etc).</li>
+<li>Currently, Hyde support for nested directories besides those already defined is experimental.</li>
 </ol>
 <h2>Conventions to follow<a id="conventions-to-follow" href="#conventions-to-follow" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
 <h3>File naming<a id="file-naming" href="#file-naming" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h3>
@@ -329,63 +316,71 @@ For example, Hyde makes attempts to guess the title for a page depending on the 
 <p>Unexpected behaviour might occur if you use conflicting file names.
 All the following filenames are resolved into the same destination file:
 <code>foo-bar.md</code>, <code>Foo-Bar.md</code>, <code>foo-bar.blade.php</code>, causing only one of them to be saved.</p>
-<p>Remember, files retain their base filenames when compiled to HTML.</p>
+<p>Remember, files retain their slugs when compiled to HTML.</p>
 <h4>Summary<a id="summary" href="#summary" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h4>
 <ul>
-<li>✔ <strong>Do</strong> use lowercase filenames and extensions</li>
-<li>✔ <strong>Do</strong> use filenames written in kebab-case-format</li>
-<li>✔ <strong>Do</strong> use the proper file extensions</li>
-<li>❌ <strong>Don't</strong> use conflicting source file names</li>
+<li>
+<p>✔ <strong>Do</strong> use lowercase filenames and extensions</p>
+</li>
+<li>
+<p>✔ <strong>Do</strong> use filenames written in kebab-case-format</p>
+</li>
+<li>
+<p>✔ <strong>Do</strong> use the proper file extensions</p>
+</li>
+<li>
+<p>❌ <strong>Don't</strong> use conflicting source file names</p>
+</li>
 </ul>
 <h2>Extra Information<a id="extra-information" href="#extra-information" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
 <h3>Definitions<a id="definitions" href="#definitions" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h3>
-<p>We will use the following definitions to describe the behaviour of Hyde.</p>
-<h4>General<a id="general" href="#general" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h4>
+<p>We will use the following definitions to describe the behaviour of Hyde.
+Based on <a href="https://github.com/hydephp/DocsCI/blob/ff4589b175c2794b0dfd4eedfe975fb02d20523c/_posts/draft-developer-definitions.markdown">this blog post</a>.</p>
 <ul>
 <li>
-<strong>Hyde</strong>: The application that you are using.</li>
-<li>
-<strong>HydeCLI</strong>: The command-line interface for Hyde.</li>
-<li>
-<strong>Framework</strong>: The package containing the core codebase.</li>
-</ul>
-<h4>Path components<a id="path-components" href="#path-components" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h4>
-<ul>
-<li>
-<strong>Identifier</strong>: The filepath without the extension, relative to the page type source directory.</li>
-<li>
-<strong>Route Key</strong>: The page type's output directory plus the identifier. Example: <code>posts/hello-world</code>
+<p><strong>Hyde</strong>: The application that you are using.</p>
 </li>
 <li>
-<strong>Basename</strong>: The filename without the extension. Example: <code>hello-world</code>
+<p><strong>HydeCLI</strong>: The command-line interface for Hyde.</p>
 </li>
 <li>
-<strong>Filename</strong>: The full name of a file with the extension. Example: <code>hello-world.md</code>
+<p><strong>Framework</strong>: The Hyde core codebase.</p>
 </li>
 <li>
-<strong>Filepath</strong>: The full file path including extension. Example: <code>_posts/hello-world.md</code>
+<p><strong>Slug</strong>: The filename without the extension (basename) (internally also known as <code>identifier</code>).  Example: <code>hello-world</code></p>
+</li>
+<li>
+<p><strong>Filename</strong>: The full name of a file with the extension. Example: <code>hello-world.md</code></p>
+</li>
+<li>
+<p><strong>Filepath</strong>: The full file path including extension (almost always relative to the Hyde project) Example: <code>_posts/hello-world.md</code></p>
 </li>
 </ul>
-<p>You can read more about some of these in the <a href="core-concepts#paths-identifiers-and-route-keys">Core Concepts</a> article.</p>
+<style>
+#document-main-content > ul > li > p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+</style>
 <h2>Common issues, causes, and solutions<a id="common-issues-causes-and-solutions" href="#common-issues-causes-and-solutions" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
 <table>
 <thead>
 <tr>
 <th>Issue</th>
-<th>Possible Cause / Issue Context</th>
+<th>Possible Cause</th>
 <th>Possible Solution</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>404 error when visiting site</td>
-<td>Are you missing an index file in the <code>_pages</code> directory?</td>
-<td>Add an <code>index.md</code> or <code>index.blade.php</code> to the <code>_pages</code> directory</td>
+<td>Are you missing an index file in the _pages directory?</td>
+<td>Add an index.md or index.blade.php</td>
 </tr>
 <tr>
 <td>Navigation menu not linking to the docs</td>
-<td>You probably don't have an <code>index.md</code> file in the <code>_docs</code> directory.</td>
-<td>Create a <code>_docs/index.md</code> file</td>
+<td>You probably don't have an index.md file in the _docs directory.</td>
+<td>Create an index file</td>
 </tr>
 <tr>
 <td>Page not discovered when compiling</td>
@@ -400,7 +395,12 @@ All the following filenames are resolved into the same destination file:
 <tr>
 <td>Torchlight not working</td>
 <td>Missing Composer package, missing API token, extension disabled in the config.</td>
-<td>Reinstall Torchlight, add your token in the <code>.env</code> file, check config</td>
+<td>Reinstall Torchlight, add your token in the .env file, check config</td>
+</tr>
+<tr>
+<td>Error in Parser.php: &quot;unable to parse&quot;</td>
+<td>Could be an issue with the YAML front matter parser.</td>
+<td>Try adding a block of front matter to the top of the file</td>
 </tr>
 <tr>
 <td>Missing styles and/or assets</td>
@@ -409,8 +409,8 @@ All the following filenames are resolved into the same destination file:
 </tr>
 <tr>
 <td>Image not found</td>
-<td>You may be using a bad relative path.</td>
-<td>Ensure your relative paths are correct.  See <a href="managing-assets#referencing-images">managing-assets</a>.</td>
+<td>You may be using a bad relative path. See <a href="managing-assets#referencing-images">managing-assets</a>.</td>
+<td>Ensure your relative paths are correct.</td>
 </tr>
 <tr>
 <td>Wrong layout used</td>
@@ -420,7 +420,7 @@ All the following filenames are resolved into the same destination file:
 <tr>
 <td>Invalid/no permalinks or post URIs</td>
 <td>You may be missing or have an invalid site URL</td>
-<td>Set the site URL in the <code>.env</code> file</td>
+<td>Set the site URL in the .env file</td>
 </tr>
 <tr>
 <td>No styles in custom Blade pages</td>
@@ -430,7 +430,7 @@ All the following filenames are resolved into the same destination file:
 <tr>
 <td>Overriding Hyde views is not working</td>
 <td>Ensure the Blade views are in the correct directory.</td>
-<td>Rerun <code>php hyde publish:views</code>.</td>
+<td>Rerun php hyde publish:views.</td>
 </tr>
 <tr>
 <td>Styles not updating when deploying site</td>
@@ -439,27 +439,27 @@ All the following filenames are resolved into the same destination file:
 </tr>
 <tr>
 <td>Documentation sidebar items are in the wrong order</td>
-<td>Double check the config, make sure the route keys are written correctly. Check that you are not overriding with front matter.</td>
+<td>Double check the config, make sure the slugs are written correctly. Check that you are not overriding with front matter.</td>
 <td>Check config for typos and front matter</td>
 </tr>
 <tr>
 <td>Documentation table of contents is weird</td>
-<td>The table of contents markup is generated by the <a href="https://commonmark.thephpleague.com/2.3/extensions/table-of-contents/">League/CommonMark extension</a></td>
+<td>The table of contents markup is generated by the <a href="https://commonmark.thephpleague.com/2.3/extensions/table-of-contents/">Leauge/CommonMark extension</a></td>
 <td>Make sure that your Markdown headings make sense</td>
 </tr>
 <tr>
 <td>Issues with date in blog post front matter</td>
-<td>The date is parsed by the PHP <code>strtotime()</code> function. The date may be in an invalid format, or the front matter is invalid</td>
-<td>Ensure the date is in a format that <code>strtotime()</code> can parse. Wrap the front matter value in quotes.</td>
+<td>The date is parsed by the PHP strtotime() function. The date may be in an invalid format, or the front matter is invalid</td>
+<td>Ensure the date is in a format that strtotime() can parse. Wrap the front matter value in quotes.</td>
 </tr>
 <tr>
 <td>RSS feed not being generated</td>
-<td>The RSS feed requires that you have set a site URL in the Hyde config or the <code>.env</code> file. Also check that you have blog posts, and that they are enabled.</td>
+<td>The RSS feed requires that you have set a site URL in the Hyde config or the .env file. Also check that you have blog posts, and that they are enabled.</td>
 <td>Check your configuration files.</td>
 </tr>
 <tr>
 <td>Sitemap not being generated</td>
-<td>The sitemap requires that you have set a site URL in the Hyde config or the <code>.env</code> file.</td>
+<td>The sitemap requires that you have set a site URL in the Hyde config or the .env file.</td>
 <td>Check your configuration files.</td>
 </tr>
 <tr>
@@ -474,7 +474,7 @@ All the following filenames are resolved into the same destination file:
 <p>If your configuration is broken, you might not be able to run any commands through the HydeCLI.
 To remedy this you can copy the config files from the vendor directory into the project directory.
 You can do this manually, or with the following rescue command:</p>
-<pre><code data-theme="material-theme-palenight" data-lang="bash" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">1</span><span style="color: #FFCB6B;">copy</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">vendor/hyde/framework/config/hyde.php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">config/hyde.php</span></div></code></pre>
+<pre><code data-theme="material-theme-palenight" data-lang="text" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">1</span><span style="color: #A6ACCD;">copy .\vendor\hyde\framework\config\hyde.php .\config\hyde.php</span></div></code></pre>
     </section>
     <footer id="document-footer" class="flex items-center flex-wrap mt-8 prose-p:my-3 justify-between text-[90%]">
         <p>
