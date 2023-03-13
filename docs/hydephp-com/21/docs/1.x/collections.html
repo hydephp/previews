@@ -110,8 +110,12 @@
             Console Commands
         </a>
     </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
-            <a href="../../docs/1.x/basic-architecture-concepts" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
-            Key HydePHP Concepts
+            <a href="../../docs/1.x/core-concepts" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
+            Core Concepts
+        </a>
+    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+            <a href="../../docs/1.x/front-matter" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
+            Front Matter
         </a>
     </li>                                    </ul>
             </li>
@@ -242,7 +246,7 @@
         </a>
     </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
             <a href="../../docs/1.x/updating-hyde" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
-            Updating Hyde
+            Updating Hyde Projects
         </a>
     </li>                                    </ul>
             </li>
@@ -265,6 +269,14 @@
     </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
             <a href="../../docs/1.x/build-tasks" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Custom Build Tasks
+        </a>
+    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+            <a href="../../docs/1.x/hyde-pages" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
+            HydePage API
+        </a>
+    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+            <a href="../../docs/1.x/in-memory-pages" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
+            InMemoryPages
         </a>
     </li>                                    </ul>
             </li>
@@ -300,6 +312,10 @@
             <a href="../../docs/1.x/page-models" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Page models
         </a>
+    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+            <a href="../../docs/1.x/the-hydekernel" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
+            The HydeKernel
+        </a>
     </li>                                    </ul>
             </li>
             </ul>
@@ -317,12 +333,12 @@
     </header>
     <section id="document-main-content" itemprop="articleBody">
         <h2>Introduction to Hyde Data Collections<a id="introduction-to-hyde-data-collections" href="#introduction-to-hyde-data-collections" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
-<p>Hyde provides <code>DataCollections</code>, a subset of <a href="https://laravel.com/docs/9.x/collections">Laravel Collections</a> giving you
+<p>Hyde provides <code>DataCollections</code>, a subset of <a href="https://laravel.com/docs/10.x/collections">Laravel Collections</a> giving you
 a similar developer experience to working with Eloquent Collections. However, instead of accessing a database,
 it's all entirely file-based using static data files such as Markdown, Yaml, and JSON files which get
 parsed into objects that you can easily work with.</p>
 <p>As you have access to all standard Laravel Collection methods, you are encouraged to read the
-<a href="https://laravel.com/docs/9.x/collections">Laravel Collections documentation</a> for more information.</p>
+<a href="https://laravel.com/docs/10.x/collections">Laravel Collections documentation</a> for more information.</p>
 <p>This article covers advanced usage intended for those who are writing their own Blade views, and is not required as Hyde comes pre-packaged with many templates for you to use.</p>
 <h2>High-Level Concept Overview<a id="high-level-concept-overview" href="#high-level-concept-overview" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
 <p>To make collections easy to use and understand, Hyde makes a few assumptions about the structure of your collections.
