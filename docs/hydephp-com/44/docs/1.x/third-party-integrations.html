@@ -3,15 +3,15 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HydePHP.com PR Preview - Quickstart Guide</title>
+<title>HydePHP.com PR Preview - Integrations with third-party tools</title>
 
  
 <link rel="shortcut icon" href="../../media/favicon.ico" type="image/x-icon">
 
 
-<link rel="canonical" href="https://hydephp.com/docs/1.x/quickstart">
-<meta name="twitter:title" content="HydePHP.com PR Preview - Quickstart Guide">
-<meta property="og:title" content="HydePHP.com PR Preview - Quickstart Guide">
+<link rel="canonical" href="https://hydephp.com/docs/1.x/third-party-integrations">
+<meta name="twitter:title" content="HydePHP.com PR Preview - Integrations with third-party tools">
+<meta property="og:title" content="HydePHP.com PR Preview - Integrations with third-party tools">
 
 
 <link rel="sitemap" href="https://hydephp.com/sitemap.xml" type="application/xml" title="Sitemap">
@@ -89,7 +89,7 @@
 </div>    </header>
     <nav id="sidebar-navigation" class="p-2 overflow-y-auto border-y border-gray-300 dark:border-[#1b2533] h-full">
         <ul id="sidebar-items" role="list">
-                            <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: true }" >
+                            <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
                     <h4 class="sidebar-group-heading text-base font-semibold  cursor-pointer dark:group-hover:text-white ">Getting Started</h4>
                                             <button class="sidebar-group-toggle opacity-50 group-hover:opacity-100">
@@ -101,53 +101,11 @@
     </svg>
 </button>                                    </header>
                 <ul class="sidebar-group-items ml-4 px-2 mb-2" role="list"  x-show="groupOpen" >
-                                            <li class="sidebar-item -ml-4 pl-4 active -ml-8 pl-8 bg-black/5 dark:bg-black/10" role="listitem">
-            <a href="../../docs/1.x/quickstart" aria-current="true" class="-ml-8 pl-4 py-1 px-2 block text-indigo-600 dark:text-indigo-400 dark:font-medium border-l-[0.325rem] border-indigo-500 transition-colors duration-300 ease-in-out hover:bg-black/10">
+                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+            <a href="../../docs/1.x/quickstart" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Quickstart Guide
         </a>
-
-                    <span class="sr-only">Table of contents</span>
-            <ul class="table-of-contents">
-<li>
-<a href="#installing-hydephp-using-composer">Installing HydePHP using Composer</a>
-<ul>
-<li>
-<a href="#requirements">Requirements</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#using-the-hyde-cli">Using the Hyde CLI</a>
-</li>
-<li>
-<a href="#starting-a-development-server">Starting a development server</a>
-</li>
-<li>
-<a href="#creating-content">Creating content</a>
-<ul>
-<li>
-<a href="#directory-structure">Directory structure</a>
-</li>
-<li>
-<a href="#scaffolding-files">Scaffolding files</a>
-</li>
-<li>
-<a href="#compiling-to-static-html">Compiling to static HTML</a>
-</li>
-<li>
-<a href="#managing-assets">Managing assets</a>
-</li>
-<li>
-<a href="#deploying-your-site">Deploying your site</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#further-reading">Further reading</a>
-</li>
-</ul>
-
-            </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
             <a href="../../docs/1.x/console-commands" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Console Commands
         </a>
@@ -305,7 +263,7 @@
         </a>
     </li>                                    </ul>
             </li>
-                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
+                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: true }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
                     <h4 class="sidebar-group-heading text-base font-semibold  cursor-pointer dark:group-hover:text-white ">Extensions</h4>
                                             <button class="sidebar-group-toggle opacity-50 group-hover:opacity-100">
@@ -325,11 +283,27 @@
             <a href="../../docs/1.x/realtime-compiler" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Realtime Compiler
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
-            <a href="../../docs/1.x/third-party-integrations" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4 active -ml-8 pl-8 bg-black/5 dark:bg-black/10" role="listitem">
+            <a href="../../docs/1.x/third-party-integrations" aria-current="true" class="-ml-8 pl-4 py-1 px-2 block text-indigo-600 dark:text-indigo-400 dark:font-medium border-l-[0.325rem] border-indigo-500 transition-colors duration-300 ease-in-out hover:bg-black/10">
             Third-Party Integrations
         </a>
-    </li>                                    </ul>
+
+                    <span class="sr-only">Table of contents</span>
+            <ul class="table-of-contents">
+<li>
+<a href="#torchlight">Torchlight</a>
+<ul>
+<li>
+<a href="#getting-started">Getting started</a>
+</li>
+<li>
+<a href="#attribution-and-configuration">Attribution and configuration</a>
+</li>
+</ul>
+</li>
+</ul>
+
+            </li>                                    </ul>
             </li>
             </ul>
     </nav>
@@ -342,57 +316,24 @@
         <article id="document" itemscope itemtype="https://schema.org/Article" class="mx-auto lg:ml-8 max-w-3xl p-12 md:px-16 max-w-[1000px] min-h-[calc(100vh_-_4rem)] prose dark:prose-invert torchlight-enabled">
     
     <header id="document-header" class="flex items-center flex-wrap justify-between prose-h1:mb-3">
-        <h1>Quickstart Guide</h1>
+        <h1>Integrations with third-party tools</h1>
     </header>
     <section id="document-main-content" itemprop="articleBody">
-        <h2>Installing HydePHP using Composer<a id="installing-hydephp-using-composer" href="#installing-hydephp-using-composer" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
-<p>The recommended method of installing Hyde is using Composer, which installs the required dependencies on a per-project basis.</p>
-<pre><code data-theme="material-theme-palenight" data-lang="bash" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">composer</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">create-project</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">hyde/hyde</span></div></code></pre>
-<h3>Requirements<a id="requirements" href="#requirements" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h3>
-<p>Hyde is based on <a href="https://laravel.com/docs/10.x/releases">Laravel 10</a>
-which requires a minimum PHP version of 8.1.
-You should also have <a href="https://getcomposer.org/">Composer</a> installed.</p>
-<p>To use some features like <a href="managing-assets">compiling your own assets</a>
-you also need NodeJS and NPM.</p>
-<h2>Using the Hyde CLI<a id="using-the-hyde-cli" href="#using-the-hyde-cli" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
-<p>The main way to interact with Hyde is through the <a href="console-commands">HydeCLI</a>, a Laravel Artisan-based command-line interface. Learn more about the HydeCLI in the <a href="console-commands">console commands</a> documentation.</p>
-<h2>Starting a development server<a id="starting-a-development-server" href="#starting-a-development-server" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
-<p>To make previewing your site a breeze you can use the realtime compiler, which builds your pages on the fly.</p>
-<pre><code data-theme="material-theme-palenight" data-lang="bash" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">1</span><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">hyde</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">serve</span></div></code></pre>
-<p>Simply run the serve command, and you will be able to preview your site at <a href="http://localhost:8080">http://localhost:8080</a>.</p>
-<h2>Creating content<a id="creating-content" href="#creating-content" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
-<h3>Directory structure<a id="directory-structure" href="#directory-structure" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h3>
-<p>Creating content with Hyde is easy! Simply place source files in one of the source directories,
-and Hyde will automatically discover, parse, and compile them to static HTML.
-The directory and file extension of a source file will determine how HydePHP parses and compiles it.
-Please see the <a href="core-concepts#directory-structure">directory structure</a> section for more information.</p>
-<h3>Scaffolding files<a id="scaffolding-files" href="#scaffolding-files" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h3>
-<p>You can scaffold blog post files using the <code>php hyde make:post</code> command which automatically creates the front matter, based on your input selections.
-You can also scaffold pages with the <code>php hyde make:page</code> command.</p>
-<pre><code data-theme="material-theme-palenight" data-lang="bash" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">1</span><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">hyde</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:post</span></div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">2</span><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">hyde</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">make:page</span></div></code></pre>
-<h3>Compiling to static HTML<a id="compiling-to-static-html" href="#compiling-to-static-html" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h3>
-<p>Now that you have some amazing content, you'll want to compile your site into static HTML. Thankfully, this is as easy as executing the <code>build</code> command, after which your compiled site is stored in the <code>_site</code> directory.</p>
-<pre><code data-theme="material-theme-palenight" data-lang="bash" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">1</span><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">hyde</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">build</span></div></code></pre>
-<p>When building the site, Hyde will scan your source directories for files and compile them into static HTML using the appropriate layout depending
-on what kind of page it is. You don't have to worry about routing as Hyde takes care of everything, including creating navigation menus!</p>
-<h3>Managing assets<a id="managing-assets" href="#managing-assets" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h3>
-<p>Hyde comes bundled with a precompiled and minified <code>app.css</code> file, containing all the Tailwind you need for the default views meaning that you don't even need to use NPM. However, Hyde is already configured to use Laravel Mix to compile your assets if you feel like there's a need to build the assets yourself. See more on the <a href="managing-assets">Managing Assets</a> page.</p>
-<h3>Deploying your site<a id="deploying-your-site" href="#deploying-your-site" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h3>
-<p>You are now ready to show your site to the world! Simply copy the <code>_site</code> directory to your web server's document root, and you're ready to go.</p>
-<p>You can even use GitHub Pages to host your site for free. That's what the Hyde website does, using an Actions CI workflow that automatically builds and deploys this site.</p>
-<h2>Further reading<a id="further-reading" href="#further-reading" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
-<p>Here's some ideas of what to read next:</p>
-<ul>
-<li>
-<a href="core-concepts">Architecture Concepts &amp; Directory Structure</a>
-</li>
-<li>
-<a href="console-commands">Console Commands with the HydeCLI</a>
-</li>
-<li>
-<a href="blog-posts">Creating Blog Posts</a>
-</li>
-</ul>
+        <h2>Torchlight<a id="torchlight" href="#torchlight" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
+<p>Torchlight is an amazing API for syntax highlighting, and is used by this site. I cannot recommend it highly enough,
+especially for documentation sites and code-heavy blogs! As such, HydePHP has built-in support for Torchlight,
+which is automatically enabled once you add an API token to your <code>.env</code> file. Nothing else needs to be done!</p>
+<h3>Getting started<a id="getting-started" href="#getting-started" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h3>
+<p>To get started you need an API token which you can get at <a href="https://torchlight.dev/">Torchlight.dev</a>.
+It is entirely free for personal and open source projects, as seen on their <a href="https://torchlight.dev/#pricing">pricing page</a>.</p>
+<p>When you have an API token, set it in the <code>.env</code> file in the root directory of your project.
+Once a token is set, Hyde will automatically enable the CommonMark extension.</p>
+<pre><code data-theme="material-theme-palenight" data-lang="env" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">1</span><span style="color: #A6ACCD;">TORCHLIGHT_TOKEN</span><span style="color: #89DDFF;">=</span><span style="color: #C3E88D;">torch_&lt;your-api-token&gt;</span></div></code></pre>
+<h3>Attribution and configuration<a id="attribution-and-configuration" href="#attribution-and-configuration" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h3>
+<p>Note that for the free plan you need to provide an attribution link. Thankfully Hyde injects a customizable link
+automatically to all pages that use Torchlight. You can of course disable and customize this in the <code>config/torchlight.php</code> file.</p>
+<pre><code data-theme="material-theme-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">1</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">attribution</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">2</span><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">enabled</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">true,</span></div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">3</span><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">markdown</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">Syntax highlighting by &lt;a href=&quot;https://torchlight.dev/&quot; rel=&quot;noopener nofollow&quot;&gt;Torchlight.dev&lt;/a&gt;</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color:#3A3F58; text-align: right; -webkit-user-select: none; user-select: none;" class="line-number">4</span><span style="color: #89DDFF;">],</span></div></code></pre>
+<p>Don't have this file? Run <code>php hyde vendor:publish</code> to publish it.</p>
     </section>
     <footer id="document-footer" class="flex items-center flex-wrap mt-8 prose-p:my-3 justify-between text-[90%]">
         <p>
@@ -401,7 +342,7 @@ on what kind of page it is. You don't have to worry about routing as Hyde takes 
     </i>
 </p>
 <p class="edit-page-link">
-    <a href="https://github.com/hydephp/develop/blob/master/docs/getting-started/quickstart.md">
+    <a href="https://github.com/hydephp/develop/blob/master/docs/extensions/third-party-integrations.md">
         Edit Page
     </a>
 </p>
